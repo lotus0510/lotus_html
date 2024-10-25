@@ -14,31 +14,63 @@
     </header>
     <main>
         <section id=overview>
-            <div id="overview_button">
-                <div >出生年月日</div>
-                <div>學經歷</div>
-                <div>工作經歷</div>
-            </div>
-
-            <div id="overview_content">
-                <div id="birthdat">
-                    <h1>2003年5月10日</h1>
+            <div id="t1">
+                <h1 id="t1_h1">基本介紹</h1>
+                <div id="moon_box">
+                    <img src="img\moon.png" alt=""id=moon>
                 </div>
             </div>
+
+            <hr>
+            
+            <div id="overview_box">
+                <div id="overview_box_button">
+                    <ul id="overview_box_button_ul">
+                        <li id="date_click">出生日期</li>
+                        <li id="school_click">學經歷</li>
+                        <li id="work_click">工作經歷</li>
+                        <li id="special_click">個人特質</li>
+                    </ul>
+                </div>
+
+                <div id="overview_box_content">
+                    <div id="date">
+                        <h1>2003年5月</h1>
+                        <h1>金牛座</h1>
+                    </div>
+                    <div id="school">
+                        <h1>宜蘭高商</h1>
+                        <h1>實踐大學</h1>
+                    </div>
+                    <div id="school">
+                        <h1>實踐大學圖書館</h1>
+                        <h1>國稅局報稅人員(一週)</h1>
+                    </div>
+                    <div id="emo">
+                        <h1>我也不知道</h1>
+                    </div>
+                </div>
+
+            </div>
+
+
         </section>
         <hr>
         <section id="sec2">
             <div id="certificate_box">
+                <h1>證照展示</h1>
+                <hr>
                 <div id=certificate>
                     <div class="certificate_img"></div>
                     <div class="certificate_img"></div>
                     <div class="certificate_img"></div>
+                    <div id="arrow_box">
+                        <button class="arrow" id="left_arrow">&#10094;</button>
+                        <button class="arrow" id='right_arrow'>&#10095;</button>
+                    </div>
                 </div>
             </div>
-            <div id="arrow_box">
-                <button class="arrow" id="left_arrow">&#10094;</button>
-                <button class="arrow" id='right_arrow'>&#10095;</button>
-            </div>
+
         </section>
         <section id="sec_school">
             <div>
@@ -138,8 +170,14 @@
     </main>
     <footer>
         <p>I'm footer</p>
+        <div id="circle">
+            <img src="img\circle.png" alt="">
+        </div>
     </footer>
     <script src="intro.js"></script>
+    <script src="move.js"></script>
+    <script src="basic.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 </body>

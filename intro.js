@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded',function(){
     fun_certificate_img()
     img_fun()
     fun_chart()
-    certificate_box()
+    fun_chart_rader()
 })
 
 let certificate = document.getElementById('certificate')
@@ -42,10 +42,9 @@ let img11 = 'img/20231021_防洗錢.jpg';
 let img12 = 'img/20240425_普業.jpg';
 let img13 = 'img/20240709_產險.jpg';
 let img14 = 'img/20240918_期貨.jpg';
-
 let img_box = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12, img13, img14];
+// 獲取月亮元素
 
-// 箭頭
 function img_fun() {
     let item = 0;
     const Rarrow = document.getElementById('right_arrow');
@@ -77,7 +76,7 @@ function img_fun() {
 
 function fun_chart(){
     let ctx = document.getElementById('mychart').getContext('2d')
-    let mychart = new Chart(ctx,{
+    new Chart(ctx,{
         type: 'line',
         data:{
             labels:['110-1','110-2','111-1','111-2','112-1','112-2','113-1','113-2'],
@@ -97,3 +96,34 @@ function fun_chart(){
 
     })
 }
+
+
+function fun_chart_rader() {
+    // 創建雷達圖
+    let rader = document.getElementById('rader').getContext('2d')
+    new Chart(rader,{
+        type: 'radar',
+        data:{
+            labels: ['團隊合作','服務精神','專業能力','細心與耐心'],
+            datasets:[{
+                label:'個人特質',
+                data:[5,8,9,7],
+            }]
+        },
+        options:{
+            responsive: true,
+            maintainAspectratio:true,
+            scales:{
+                r:{
+                    angleLines:{
+                        display:false
+                    },
+                    suggestedMin:0,
+                    suggestedMax:10,
+                },
+            }
+        }
+    })
+}
+
+
